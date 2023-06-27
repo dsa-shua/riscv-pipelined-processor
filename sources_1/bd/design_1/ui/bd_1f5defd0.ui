@@ -1,0 +1,98 @@
+{
+   "ActiveEmotionalView":"Default View",
+   "Default View_ScaleFactor":"0.215037",
+   "Default View_TopLeft":"-140,-651",
+   "ExpandedHierarchyInLayout":"",
+   "guistr":"# # String gsaved with Nlview 7.0r6  2020-01-29 bk=1.5227 VDI=41 GEI=36 GUI=JA:10.0 non-TLS
+#  -string -flagsOSRD
+preplace port CLK -pg 1 -lvl 0 -x 0 -y 290 -defaultsOSRD
+preplace port PC_DISABLE -pg 1 -lvl 0 -x 0 -y 340 -defaultsOSRD
+preplace portBus OUT_PC_0 -pg 1 -lvl 15 -x 4990 -y 470 -defaultsOSRD
+preplace inst PC_ADD_4 -pg 1 -lvl 1 -x 100 -y 450 -defaultsOSRD
+preplace inst PC_ADD_CTRL -pg 1 -lvl 1 -x 100 -y 350 -defaultsOSRD
+preplace inst CONTROL_0 -pg 1 -lvl 8 -x 2330 -y 370 -defaultsOSRD
+preplace inst INSTRUCTION_DECODER_0 -pg 1 -lvl 7 -x 1970 -y 310 -defaultsOSRD
+preplace inst MUX2_0 -pg 1 -lvl 3 -x 590 -y 350 -defaultsOSRD
+preplace inst RISCVALU_0 -pg 1 -lvl 2 -x 330 -y 360 -defaultsOSRD
+preplace inst IF_ID_PIPELINE -pg 1 -lvl 6 -x 1610 -y 420 -defaultsOSRD
+preplace inst IMM_GEN_0 -pg 1 -lvl 10 -x 3260 -y 430 -defaultsOSRD
+preplace inst ALUControl_0 -pg 1 -lvl 11 -x 3640 -y 80 -defaultsOSRD
+preplace inst RISCVALU_1 -pg 1 -lvl 12 -x 3940 -y 450 -defaultsOSRD
+preplace inst MUX2_1 -pg 1 -lvl 11 -x 3640 -y 660 -defaultsOSRD
+preplace inst AND_GATE_0 -pg 1 -lvl 2 -x 330 -y 160 -defaultsOSRD
+preplace inst DATA_MEMORY_0 -pg 1 -lvl 6 -x 1610 -y 860 -defaultsOSRD
+preplace inst EX_MEM_PIPELINE_0 -pg 1 -lvl 13 -x 4320 -y 360 -defaultsOSRD
+preplace inst WB_MUX -pg 1 -lvl 7 -x 1970 -y 860 -defaultsOSRD
+preplace inst MEM_WB_PIPELINE_0 -pg 1 -lvl 14 -x 4770 -y 520 -defaultsOSRD
+preplace inst PROGRAM_COUNTER -pg 1 -lvl 4 -x 830 -y 350 -defaultsOSRD
+preplace inst INSTRUCTION_MEMORY -pg 1 -lvl 5 -x 1170 -y 530 -defaultsOSRD
+preplace inst REGISTER_FILE_0 -pg 1 -lvl 8 -x 2330 -y 620 -defaultsOSRD
+preplace inst ID_EX_PIPELINE_0 -pg 1 -lvl 9 -x 2760 -y 300 -defaultsOSRD
+preplace netloc PC_0_PC 1 1 5 190 450 NJ 450 NJ 450 960 420 NJ
+preplace netloc MUX2_0_C 1 3 1 690J 350n
+preplace netloc RISCVALU_0_ALUOut 1 2 1 N 350
+preplace netloc xlconstant_0_dout 1 1 1 180J 370n
+preplace netloc PC_ADD_CTRL_dout 1 1 1 NJ 350
+preplace netloc CLK_0_1 1 0 14 NJ 290 180 270 NJ 270 NJ 270 970 340 1370 340 1820J 420 2160 170 2500 110 3000 240 NJ 240 3810 230 4100 140 4590
+preplace netloc IF_ID_PIPELINE_0_OUT_INSTRUCTION 1 6 1 1810 310n
+preplace netloc INSTRUCTION_DECODER_0_OPCODE 1 7 1 2150 260n
+preplace netloc IF_ID_PIPELINE_OUT_PC 1 6 3 1800 190 NJ 190 NJ
+preplace netloc INSTRUCTION_DECODER_0_RD 1 7 2 2120 210 NJ
+preplace netloc INSTRUCTION_DECODER_0_FUNC3 1 7 2 2130 230 NJ
+preplace netloc INSTRUCTION_DECODER_0_FUNC7 1 7 2 2140 250 NJ
+preplace netloc CONTROL_0_ALUOp 1 8 1 2500 270n
+preplace netloc CONTROL_0_ALUSrc 1 8 1 2510 290n
+preplace netloc CONTROL_0_Branch 1 8 1 N 310
+preplace netloc CONTROL_0_MemRead 1 8 1 N 330
+preplace netloc CONTROL_0_MemWrite 1 8 1 2530 350n
+preplace netloc CONTROL_0_RegWrite 1 8 1 2540 370n
+preplace netloc CONTROL_0_MemToReg 1 8 1 2520 350n
+preplace netloc INSTRUCTION_MEMORY_0_INSTRUCTION 1 5 1 1380 440n
+preplace netloc INSTRUCTION_DECODER_0_RS1 1 7 1 2130 320n
+preplace netloc INSTRUCTION_DECODER_0_RS2 1 7 1 2120 340n
+preplace netloc REGISTER_FILE_0_READ_DATA_1 1 8 1 2550 410n
+preplace netloc REGISTER_FILE_0_READ_DATA_2 1 8 1 2560 430n
+preplace netloc ID_EX_PIPELINE_0_OUT_INSTRUCTION 1 9 1 N 440
+preplace netloc ID_EX_PIPELINE_0_OUT_FUNC3 1 9 2 2970J 150 3480
+preplace netloc ID_EX_PIPELINE_0_OUT_FUNC7 1 9 2 2990J 170 3490
+preplace netloc ID_EX_PIPELINE_0_OUT_ALUOp 1 9 2 2980J 130 3470
+preplace netloc ID_EX_PIPELINE_0_OUT_ALUSrc 1 9 2 3030 300 3490J
+preplace netloc IMM_GEN_0_IMM_VALUE 1 10 1 3430 430n
+preplace netloc ID_EX_PIPELINE_0_OUT_READ_DATA_1 1 9 4 3040 360 NJ 360 3800 360 4070
+preplace netloc ID_EX_PIPELINE_0_OUT_READ_DATA_2 1 9 4 2980 340 3450 540 NJ 540 4090
+preplace netloc MUX2_1_C 1 11 1 3810 480n
+preplace netloc ALUControl_0_ALUCtl 1 11 1 3790 80n
+preplace netloc ID_EX_PIPELINE_0_OUT_Branch 1 9 4 2980J 320 3470J 340 NJ 340 4110
+preplace netloc ID_EX_PIPELINE_0_OUT_PC 1 9 4 3010J 190 3440J 210 NJ 210 4120
+preplace netloc ID_EX_PIPELINE_0_OUT_RD 1 9 4 NJ 200 3430J 220 NJ 220 4110
+preplace netloc RISCVALU_1_ALUOut 1 12 1 4100 430n
+preplace netloc ID_EX_PIPELINE_0_OUT_MemRead 1 9 4 2960J 330 NJ 330 NJ 330 4100
+preplace netloc ID_EX_PIPELINE_0_OUT_MemWrite 1 9 4 2970J 290 NJ 290 NJ 290 4120
+preplace netloc ID_EX_PIPELINE_0_OUT_RegWrite 1 9 4 3030J 350 NJ 350 NJ 350 4080
+preplace netloc ID_EX_PIPELINE_0_OUT_MemToReg 1 9 4 3020J 310 NJ 310 NJ 310 4090
+preplace netloc RISCVALU_1_Zero 1 12 1 4100 450n
+preplace netloc EX_MEM_PIPELINE_0_OUT_Branch 1 1 13 180 60 NJ 60 NJ 60 NJ 60 NJ 60 NJ 60 NJ 60 NJ 60 NJ 60 3460J 160 3770J 120 NJ 120 4530
+preplace netloc EX_MEM_PIPELINE_0_OUT_ZERO 1 1 13 190 70 NJ 70 NJ 70 NJ 70 NJ 70 NJ 70 NJ 70 NJ 70 NJ 70 3510J 170 NJ 170 4070J 150 4540
+preplace netloc AND_GATE_0_C 1 2 1 460 160n
+preplace netloc EX_MEM_PIPELINE_0_OUT_MemRead 1 5 9 1400 90 NJ 90 NJ 90 NJ 90 3030J 160 3450J 190 NJ 190 4080J 160 4520
+preplace netloc EX_MEM_PIPELINE_0_OUT_MemWrite 1 5 9 1390 80 NJ 80 NJ 80 NJ 80 3040J 140 3500J 200 3780J 130 NJ 130 4560
+preplace netloc EX_MEM_PIPELINE_0_OUT_EXE_RESULT 1 5 9 1420 510 NJ 510 NJ 510 NJ 510 NJ 510 NJ 510 3780J 550 NJ 550 4550
+preplace netloc EX_MEM_PIPELINE_0_OUT_READ_DATA_2 1 5 9 1410 500 1800J 490 NJ 490 NJ 490 3020J 500 NJ 500 3790J 560 NJ 560 4520
+preplace netloc MEM_WB_PIPELINE_0_OUT_EXE_RESULT 1 6 9 1820 740 NJ 740 NJ 740 NJ 740 NJ 740 NJ 740 NJ 740 NJ 740 4960
+preplace netloc DATA_MEMORY_0_READ_DATA 1 6 1 1800 860n
+preplace netloc EX_MEM_PIPELINE_0_OUT_PC 1 13 1 4580 240n
+preplace netloc MUX2_2_C 1 7 1 2130 650n
+preplace netloc EX_MEM_PIPELINE_0_OUT_RegWrite 1 13 1 4560 380n
+preplace netloc EX_MEM_PIPELINE_0_OUT_MemToReg 1 2 12 470 100 NJ 100 NJ 100 NJ 100 NJ 100 NJ 100 NJ 100 3020J 180 NJ 180 NJ 180 4090J 170 4570
+preplace netloc MEM_WB_PIPELINE_0_OUT_MemToReg 1 6 9 1810 500 NJ 500 NJ 500 2980J 520 NJ 520 3770J 570 NJ 570 4520J 640 4950
+preplace netloc MEM_WB_PIPELINE_0_OUT_PC 1 14 1 N 470
+preplace netloc MEM_WB_PIPELINE_0_OUT_RegWrite 1 7 8 2150 730 NJ 730 NJ 730 3510J 580 NJ 580 NJ 580 4530 650 4970
+preplace netloc PC_DISABLE_0_1 1 0 4 20J 260 NJ 260 NJ 260 690J
+levelinfo -pg 1 0 100 330 590 830 1170 1610 1970 2330 2760 3260 3640 3940 4320 4770 4990
+pagesize -pg 1 -db -bbox -sgen -130 0 5140 960
+"
+}
+{
+   "da_board_cnt":"2",
+   "da_clkrst_cnt":"37"
+}

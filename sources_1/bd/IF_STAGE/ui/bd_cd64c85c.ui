@@ -1,0 +1,47 @@
+{
+   "ActiveEmotionalView":"Default View",
+   "Default View_ScaleFactor":"0.993545",
+   "Default View_TopLeft":"-128,-415",
+   "ExpandedHierarchyInLayout":"",
+   "guistr":"# # String gsaved with Nlview 7.0r6  2020-01-29 bk=1.5227 VDI=41 GEI=36 GUI=JA:10.0 non-TLS
+#  -string -flagsOSRD
+preplace port PC_DISABLE -pg 1 -lvl 0 -x -30 -y 80 -defaultsOSRD
+preplace port CLK -pg 1 -lvl 0 -x -30 -y 20 -defaultsOSRD
+preplace port PROGB -pg 1 -lvl 0 -x -30 -y 150 -defaultsOSRD
+preplace port PC_CTRL -pg 1 -lvl 0 -x -30 -y -90 -defaultsOSRD
+preplace port PC_ALU_RES_ZERO -pg 1 -lvl 3 -x 760 -y 340 -defaultsOSRD
+preplace portBus INPUT_ADDRESS -pg 1 -lvl 0 -x -30 -y 210 -defaultsOSRD
+preplace portBus INPUT_INSTRUCTION -pg 1 -lvl 0 -x -30 -y 180 -defaultsOSRD
+preplace portBus PC_BRANCH_IN -pg 1 -lvl 0 -x -30 -y -50 -defaultsOSRD
+preplace portBus IF_ID_PC_OUT -pg 1 -lvl 3 -x 760 -y -140 -defaultsOSRD
+preplace portBus IF_ID_INST_OUT -pg 1 -lvl 3 -x 760 -y -110 -defaultsOSRD
+preplace inst PC_0 -pg 1 -lvl 1 -x 150 -y 90 -defaultsOSRD
+preplace inst RISCVALU_0 -pg 1 -lvl 2 -x 530 -y 330 -defaultsOSRD
+preplace inst PC_4_CONST -pg 1 -lvl 1 -x 150 -y 330 -defaultsOSRD
+preplace inst PC_CONST_CTRL -pg 1 -lvl 1 -x 150 -y 230 -defaultsOSRD
+preplace inst MUX2_0 -pg 1 -lvl 1 -x 150 -y -70 -defaultsOSRD
+preplace inst IF_ID_PIPELINE_0 -pg 1 -lvl 2 -x 530 -y -120 -defaultsOSRD
+preplace inst INSTRUCTION_MEMORY_0 -pg 1 -lvl 2 -x 530 -y 160 -defaultsOSRD
+preplace netloc PC_DISABLE_0_1 1 0 1 NJ 80
+preplace netloc CLK_0_1 1 0 2 NJ 20 320
+preplace netloc PC_0_PC 1 1 1 300J -120n
+preplace netloc PROGB_0_1 1 0 2 -10J 390 290J
+preplace netloc INPUT_ADDRESS_0_1 1 0 2 0J 160 280J
+preplace netloc INPUT_INSTRUCTION_0_1 1 0 2 10J 170 310J
+preplace netloc xlconstant_0_dout 1 1 1 280 330n
+preplace netloc PC_4_CONST1_dout 1 1 1 280 230n
+preplace netloc RISCVALU_0_ALUOut 1 0 3 10 10 NJ 10 730
+preplace netloc B_0_1 1 0 1 N -50
+preplace netloc CTL_0_1 1 0 1 N -90
+preplace netloc MUX2_0_C 1 0 2 -10 -150 280
+preplace netloc INSTRUCTION_MEMORY_0_INSTRUCTION 1 1 2 330 0 740
+preplace netloc IF_ID_PIPELINE_0_OUT_PC 1 2 1 740 -140n
+preplace netloc IF_ID_PIPELINE_0_OUT_INSTRUCTION 1 2 1 N -110
+preplace netloc RISCVALU_0_Zero 1 2 1 N 340
+levelinfo -pg 1 -30 150 530 760
+pagesize -pg 1 -db -bbox -sgen -250 -200 950 420
+"
+}
+{
+   "da_clkrst_cnt":"1"
+}

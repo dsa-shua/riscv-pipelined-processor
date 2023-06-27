@@ -1,0 +1,607 @@
+{
+  "design": {
+    "design_info": {
+      "boundary_crc": "0x9ABF43050587FFC4",
+      "device": "xc7z020clg400-1",
+      "gen_directory": "../../../../simple_multiplication.gen/sources_1/bd/ID_STAGE",
+      "name": "ID_STAGE",
+      "rev_ctrl_bd_flag": "RevCtrlBdOff",
+      "synth_flow_mode": "Hierarchical",
+      "tool_version": "2020.2",
+      "validated": "true"
+    },
+    "design_tree": {
+      "INSTRUCTION_DECODER_0": "",
+      "CONTROL_0": "",
+      "REGISTER_FILE_0": "",
+      "ID_EX_PIPELINE_0": ""
+    },
+    "ports": {
+      "CLK": {
+        "type": "clk",
+        "direction": "I",
+        "parameters": {
+          "CLK_DOMAIN": {
+            "value": "ID_STAGE_CLK_0",
+            "value_src": "default"
+          },
+          "FREQ_HZ": {
+            "value": "100000000",
+            "value_src": "default"
+          },
+          "FREQ_TOLERANCE_HZ": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "PHASE": {
+            "value": "0.000",
+            "value_src": "default"
+          }
+        }
+      },
+      "INSTRUCTION": {
+        "direction": "I",
+        "left": "31",
+        "right": "0"
+      },
+      "PC": {
+        "direction": "I",
+        "left": "31",
+        "right": "0"
+      },
+      "WRITE_REG": {
+        "direction": "I",
+        "left": "4",
+        "right": "0"
+      },
+      "WRITE_DATA": {
+        "direction": "I",
+        "left": "31",
+        "right": "0"
+      },
+      "WRITE": {
+        "direction": "I"
+      },
+      "ID_OUT_ALUSrc": {
+        "direction": "O"
+      },
+      "ID_OUT_READ_DATA_1": {
+        "direction": "O",
+        "left": "31",
+        "right": "0"
+      },
+      "ID_OUT_RD": {
+        "direction": "O",
+        "left": "5",
+        "right": "0"
+      },
+      "ID_OUT_FUNC3": {
+        "direction": "O",
+        "left": "2",
+        "right": "0"
+      },
+      "ID_OUT_FUNC7": {
+        "direction": "O",
+        "left": "6",
+        "right": "0"
+      },
+      "ID_OUT_ALUOp": {
+        "direction": "O",
+        "left": "1",
+        "right": "0"
+      },
+      "ID_OUT_PC": {
+        "direction": "O",
+        "left": "31",
+        "right": "0"
+      },
+      "ID_OUT_MemToReg": {
+        "direction": "O"
+      },
+      "ID_OUT_Branch": {
+        "direction": "O"
+      },
+      "ID_OUT_READ_DATA_2": {
+        "direction": "O",
+        "left": "31",
+        "right": "0"
+      },
+      "ID_OUT_MemRead": {
+        "direction": "O"
+      },
+      "ID_OUT_MemWrite": {
+        "direction": "O"
+      },
+      "ID_OUT_RegWrite": {
+        "direction": "O"
+      }
+    },
+    "components": {
+      "INSTRUCTION_DECODER_0": {
+        "vlnv": "xilinx.com:module_ref:INSTRUCTION_DECODER:1.0",
+        "xci_name": "ID_STAGE_INSTRUCTION_DECODER_0_0",
+        "xci_path": "ip\\ID_STAGE_INSTRUCTION_DECODER_0_0\\ID_STAGE_INSTRUCTION_DECODER_0_0.xci",
+        "inst_hier_path": "INSTRUCTION_DECODER_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "INSTRUCTION_DECODER",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "INSTRUCTION": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "OPCODE": {
+            "direction": "O",
+            "left": "6",
+            "right": "0"
+          },
+          "RD": {
+            "direction": "O",
+            "left": "5",
+            "right": "0"
+          },
+          "FUNC3": {
+            "direction": "O",
+            "left": "2",
+            "right": "0"
+          },
+          "RS1": {
+            "direction": "O",
+            "left": "4",
+            "right": "0"
+          },
+          "RS2": {
+            "direction": "O",
+            "left": "4",
+            "right": "0"
+          },
+          "FUNC7": {
+            "direction": "O",
+            "left": "6",
+            "right": "0"
+          }
+        }
+      },
+      "CONTROL_0": {
+        "vlnv": "xilinx.com:module_ref:CONTROL:1.0",
+        "xci_name": "ID_STAGE_CONTROL_0_0",
+        "xci_path": "ip\\ID_STAGE_CONTROL_0_0\\ID_STAGE_CONTROL_0_0.xci",
+        "inst_hier_path": "CONTROL_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "CONTROL",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "OPCODE": {
+            "direction": "I",
+            "left": "6",
+            "right": "0"
+          },
+          "Branch": {
+            "direction": "O"
+          },
+          "MemRead": {
+            "direction": "O"
+          },
+          "MemToReg": {
+            "direction": "O"
+          },
+          "ALUOp": {
+            "direction": "O",
+            "left": "1",
+            "right": "0"
+          },
+          "MemWrite": {
+            "direction": "O"
+          },
+          "ALUSrc": {
+            "direction": "O"
+          },
+          "RegWrite": {
+            "direction": "O"
+          }
+        }
+      },
+      "REGISTER_FILE_0": {
+        "vlnv": "xilinx.com:module_ref:REGISTER_FILE:1.0",
+        "xci_name": "ID_STAGE_REGISTER_FILE_0_0",
+        "xci_path": "ip\\ID_STAGE_REGISTER_FILE_0_0\\ID_STAGE_REGISTER_FILE_0_0.xci",
+        "inst_hier_path": "REGISTER_FILE_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "REGISTER_FILE",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "CLK": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "CLK_DOMAIN": {
+                "value": "ID_STAGE_CLK_0",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "REG1": {
+            "direction": "I",
+            "left": "4",
+            "right": "0"
+          },
+          "REG2": {
+            "direction": "I",
+            "left": "4",
+            "right": "0"
+          },
+          "WRITE_REG": {
+            "direction": "I",
+            "left": "4",
+            "right": "0"
+          },
+          "WRITE_DATA": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "WRITE": {
+            "direction": "I"
+          },
+          "READ_DATA_1": {
+            "direction": "O",
+            "left": "31",
+            "right": "0"
+          },
+          "READ_DATA_2": {
+            "direction": "O",
+            "left": "31",
+            "right": "0"
+          }
+        }
+      },
+      "ID_EX_PIPELINE_0": {
+        "vlnv": "xilinx.com:module_ref:ID_EX_PIPELINE:1.0",
+        "xci_name": "ID_STAGE_ID_EX_PIPELINE_0_0",
+        "xci_path": "ip\\ID_STAGE_ID_EX_PIPELINE_0_0\\ID_STAGE_ID_EX_PIPELINE_0_0.xci",
+        "inst_hier_path": "ID_EX_PIPELINE_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "ID_EX_PIPELINE",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "CLK": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "CLK_DOMAIN": {
+                "value": "ID_STAGE_CLK_0",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "IN_PC": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "IN_RD": {
+            "direction": "I",
+            "left": "5",
+            "right": "0"
+          },
+          "IN_FUNC3": {
+            "direction": "I",
+            "left": "2",
+            "right": "0"
+          },
+          "IN_FUNC7": {
+            "direction": "I",
+            "left": "6",
+            "right": "0"
+          },
+          "OUT_PC": {
+            "direction": "O",
+            "left": "31",
+            "right": "0"
+          },
+          "OUT_RD": {
+            "direction": "O",
+            "left": "5",
+            "right": "0"
+          },
+          "OUT_FUNC3": {
+            "direction": "O",
+            "left": "2",
+            "right": "0"
+          },
+          "OUT_FUNC7": {
+            "direction": "O",
+            "left": "6",
+            "right": "0"
+          },
+          "IN_ALUOp": {
+            "direction": "I",
+            "left": "1",
+            "right": "0"
+          },
+          "IN_ALUSrc": {
+            "direction": "I"
+          },
+          "IN_Branch": {
+            "direction": "I"
+          },
+          "IN_MemRead": {
+            "direction": "I"
+          },
+          "IN_MemWrite": {
+            "direction": "I"
+          },
+          "IN_RegWrite": {
+            "direction": "I"
+          },
+          "IN_MemToReg": {
+            "direction": "I"
+          },
+          "OUT_ALUOp": {
+            "direction": "O",
+            "left": "1",
+            "right": "0"
+          },
+          "OUT_ALUSrc": {
+            "direction": "O"
+          },
+          "OUT_Branch": {
+            "direction": "O"
+          },
+          "OUT_MemRead": {
+            "direction": "O"
+          },
+          "OUT_MemWrite": {
+            "direction": "O"
+          },
+          "OUT_RegWrite": {
+            "direction": "O"
+          },
+          "OUT_MemToReg": {
+            "direction": "O"
+          },
+          "IN_READ_DATA_1": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "IN_READ_DATA2": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "OUT_READ_DATA_1": {
+            "direction": "O",
+            "left": "31",
+            "right": "0"
+          },
+          "OUT_READ_DATA_2": {
+            "direction": "O",
+            "left": "31",
+            "right": "0"
+          }
+        }
+      }
+    },
+    "nets": {
+      "CLK_0_1": {
+        "ports": [
+          "CLK",
+          "REGISTER_FILE_0/CLK",
+          "ID_EX_PIPELINE_0/CLK"
+        ]
+      },
+      "REGISTER_FILE_0_READ_DATA_1": {
+        "ports": [
+          "REGISTER_FILE_0/READ_DATA_1",
+          "ID_EX_PIPELINE_0/IN_READ_DATA_1"
+        ]
+      },
+      "REGISTER_FILE_0_READ_DATA_2": {
+        "ports": [
+          "REGISTER_FILE_0/READ_DATA_2",
+          "ID_EX_PIPELINE_0/IN_READ_DATA2"
+        ]
+      },
+      "INSTRUCTION_DECODER_0_OPCODE": {
+        "ports": [
+          "INSTRUCTION_DECODER_0/OPCODE",
+          "CONTROL_0/OPCODE"
+        ]
+      },
+      "IN_PC_0_1": {
+        "ports": [
+          "PC",
+          "ID_EX_PIPELINE_0/IN_PC"
+        ]
+      },
+      "CONTROL_0_Branch": {
+        "ports": [
+          "CONTROL_0/Branch",
+          "ID_EX_PIPELINE_0/IN_Branch"
+        ]
+      },
+      "CONTROL_0_MemRead": {
+        "ports": [
+          "CONTROL_0/MemRead",
+          "ID_EX_PIPELINE_0/IN_MemRead"
+        ]
+      },
+      "CONTROL_0_MemToReg": {
+        "ports": [
+          "CONTROL_0/MemToReg",
+          "ID_EX_PIPELINE_0/IN_MemToReg"
+        ]
+      },
+      "CONTROL_0_ALUOp": {
+        "ports": [
+          "CONTROL_0/ALUOp",
+          "ID_EX_PIPELINE_0/IN_ALUOp"
+        ]
+      },
+      "CONTROL_0_MemWrite": {
+        "ports": [
+          "CONTROL_0/MemWrite",
+          "ID_EX_PIPELINE_0/IN_MemWrite"
+        ]
+      },
+      "CONTROL_0_ALUSrc": {
+        "ports": [
+          "CONTROL_0/ALUSrc",
+          "ID_EX_PIPELINE_0/IN_ALUSrc"
+        ]
+      },
+      "CONTROL_0_RegWrite": {
+        "ports": [
+          "CONTROL_0/RegWrite",
+          "ID_EX_PIPELINE_0/IN_RegWrite"
+        ]
+      },
+      "INSTRUCTION_DECODER_0_RD": {
+        "ports": [
+          "INSTRUCTION_DECODER_0/RD",
+          "ID_EX_PIPELINE_0/IN_RD"
+        ]
+      },
+      "INSTRUCTION_DECODER_0_FUNC3": {
+        "ports": [
+          "INSTRUCTION_DECODER_0/FUNC3",
+          "ID_EX_PIPELINE_0/IN_FUNC3"
+        ]
+      },
+      "INSTRUCTION_DECODER_0_RS1": {
+        "ports": [
+          "INSTRUCTION_DECODER_0/RS1",
+          "REGISTER_FILE_0/REG1"
+        ]
+      },
+      "INSTRUCTION_DECODER_0_RS2": {
+        "ports": [
+          "INSTRUCTION_DECODER_0/RS2",
+          "REGISTER_FILE_0/REG2"
+        ]
+      },
+      "WRITE_REG_0_1": {
+        "ports": [
+          "WRITE_REG",
+          "REGISTER_FILE_0/WRITE_REG"
+        ]
+      },
+      "WRITE_DATA_0_1": {
+        "ports": [
+          "WRITE_DATA",
+          "REGISTER_FILE_0/WRITE_DATA"
+        ]
+      },
+      "WRITE_0_1": {
+        "ports": [
+          "WRITE",
+          "REGISTER_FILE_0/WRITE"
+        ]
+      },
+      "INSTRUCTION_DECODER_0_FUNC7": {
+        "ports": [
+          "INSTRUCTION_DECODER_0/FUNC7",
+          "ID_EX_PIPELINE_0/IN_FUNC7"
+        ]
+      },
+      "ID_EX_PIPELINE_0_OUT_ALUSrc": {
+        "ports": [
+          "ID_EX_PIPELINE_0/OUT_ALUSrc",
+          "ID_OUT_ALUSrc"
+        ]
+      },
+      "ID_EX_PIPELINE_0_OUT_READ_DATA_1": {
+        "ports": [
+          "ID_EX_PIPELINE_0/OUT_READ_DATA_1",
+          "ID_OUT_READ_DATA_1"
+        ]
+      },
+      "ID_EX_PIPELINE_0_OUT_RD": {
+        "ports": [
+          "ID_EX_PIPELINE_0/OUT_RD",
+          "ID_OUT_RD"
+        ]
+      },
+      "ID_EX_PIPELINE_0_OUT_FUNC3": {
+        "ports": [
+          "ID_EX_PIPELINE_0/OUT_FUNC3",
+          "ID_OUT_FUNC3"
+        ]
+      },
+      "ID_EX_PIPELINE_0_OUT_FUNC7": {
+        "ports": [
+          "ID_EX_PIPELINE_0/OUT_FUNC7",
+          "ID_OUT_FUNC7"
+        ]
+      },
+      "ID_EX_PIPELINE_0_OUT_ALUOp": {
+        "ports": [
+          "ID_EX_PIPELINE_0/OUT_ALUOp",
+          "ID_OUT_ALUOp"
+        ]
+      },
+      "ID_EX_PIPELINE_0_OUT_PC": {
+        "ports": [
+          "ID_EX_PIPELINE_0/OUT_PC",
+          "ID_OUT_PC"
+        ]
+      },
+      "ID_EX_PIPELINE_0_OUT_MemToReg": {
+        "ports": [
+          "ID_EX_PIPELINE_0/OUT_MemToReg",
+          "ID_OUT_MemToReg"
+        ]
+      },
+      "ID_EX_PIPELINE_0_OUT_Branch": {
+        "ports": [
+          "ID_EX_PIPELINE_0/OUT_Branch",
+          "ID_OUT_Branch"
+        ]
+      },
+      "ID_EX_PIPELINE_0_OUT_READ_DATA_2": {
+        "ports": [
+          "ID_EX_PIPELINE_0/OUT_READ_DATA_2",
+          "ID_OUT_READ_DATA_2"
+        ]
+      },
+      "ID_EX_PIPELINE_0_OUT_MemRead": {
+        "ports": [
+          "ID_EX_PIPELINE_0/OUT_MemRead",
+          "ID_OUT_MemRead"
+        ]
+      },
+      "ID_EX_PIPELINE_0_OUT_MemWrite": {
+        "ports": [
+          "ID_EX_PIPELINE_0/OUT_MemWrite",
+          "ID_OUT_MemWrite"
+        ]
+      },
+      "ID_EX_PIPELINE_0_OUT_RegWrite": {
+        "ports": [
+          "ID_EX_PIPELINE_0/OUT_RegWrite",
+          "ID_OUT_RegWrite"
+        ]
+      },
+      "INSTRUCTION_1": {
+        "ports": [
+          "INSTRUCTION",
+          "INSTRUCTION_DECODER_0/INSTRUCTION"
+        ]
+      }
+    }
+  }
+}
